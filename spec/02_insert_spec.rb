@@ -26,7 +26,7 @@ puts describe 'inserting' do
     expect(@db.execute("SELECT COUNT(*) FROM authors;").flatten[0]).to eq(2)
   end
 
-  it 'has 16 joins in character_books' do 
+  it 'has 16 joins in character_books' do
     expect(@db.execute("SELECT COUNT(*) FROM character_books;").flatten[0]).to eq(16)
   end
 
