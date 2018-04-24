@@ -1,4 +1,4 @@
-describe 'inserting' do 
+puts describe 'inserting' do 
   before do
     @db = SQLite3::Database.new(':memory:')
     @sql_runner = SQLRunner.new(@db)
