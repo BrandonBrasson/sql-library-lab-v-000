@@ -23,7 +23,7 @@ puts describe 'creating schema' do
     end
   end
 
-  puts describe 'subgenres table' do 
+  puts describe 'subgenres table' do
     it "creates a subgenres table with a name field" do
       expect{@db.execute("SELECT name FROM subgenres;")}.to_not raise_exception
     end
