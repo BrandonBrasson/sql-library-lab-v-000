@@ -1,11 +1,11 @@
-describe 'creating schema' do
+puts describe 'creating schema' do
   before do
     @db = SQLite3::Database.new(':memory:')
     @sql_runner = SQLRunner.new(@db)
     @sql_runner.execute_schema_sql
   end
 
-  describe 'series table' do 
+  puts describe 'series table' do 
     it "creates a series table with a title field" do
       expect{@db.execute("SELECT title FROM series;")}.to_not raise_exception
     end
@@ -23,7 +23,7 @@ describe 'creating schema' do
     end
   end
 
-  describe 'subgenres table' do 
+  puts describe 'subgenres table' do 
     it "creates a subgenres table with a name field" do
       expect{@db.execute("SELECT name FROM subgenres;")}.to_not raise_exception
     end
